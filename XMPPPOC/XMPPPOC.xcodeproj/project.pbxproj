@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		145DD2D020B55AA90069FBD3 /* Stanza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD2CF20B55AA90069FBD3 /* Stanza.swift */; };
+		146489AC20B8002800A1F69D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 146489AB20B8002800A1F69D /* README.md */; };
 		14A61E6020B43A7600EE03EE /* c_hash in Resources */ = {isa = PBXBuildFile; fileRef = 14A61CC920B43A7500EE03EE /* c_hash */; };
 		14A61E6120B43A7600EE03EE /* CA.sh in Resources */ = {isa = PBXBuildFile; fileRef = 14A61CCA20B43A7500EE03EE /* CA.sh */; };
 		14A61E6220B43A7600EE03EE /* tsget in Resources */ = {isa = PBXBuildFile; fileRef = 14A61CCB20B43A7500EE03EE /* tsget */; };
@@ -123,6 +124,7 @@
 
 /* Begin PBXFileReference section */
 		145DD2CF20B55AA90069FBD3 /* Stanza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stanza.swift; sourceTree = "<group>"; };
+		146489AB20B8002800A1F69D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		14A61C2320B4337100EE03EE /* build-loop-targets.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-loop-targets.sh"; sourceTree = "<group>"; };
 		14A61C2420B4337100EE03EE /* build-loop-archs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-loop-archs.sh"; sourceTree = "<group>"; };
 		14A61C2520B4337100EE03EE /* build-libssl.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-libssl.sh"; sourceTree = "<group>"; };
@@ -1534,6 +1536,7 @@
 		14A63F7920B41F1E00EE03EE = {
 			isa = PBXGroup;
 			children = (
+				146489AB20B8002800A1F69D /* README.md */,
 				14A61CC620B43A7500EE03EE /* bin */,
 				14A61C2920B4388200EE03EE /* include */,
 				14A61C2520B4337100EE03EE /* build-libssl.sh */,
@@ -1835,6 +1838,7 @@
 				14A61E7220B43A7600EE03EE /* tsget in Resources */,
 				14A61E7E20B43A7600EE03EE /* libssl.pc in Resources */,
 				14A61E9220B43A7600EE03EE /* CA.sh in Resources */,
+				146489AC20B8002800A1F69D /* README.md in Resources */,
 				14A61E7120B43A7600EE03EE /* CA.sh in Resources */,
 				14A61E9820B43A7600EE03EE /* build-openssl-1.0.2l.log in Resources */,
 				14A61E9D20B43A7600EE03EE /* openssl.pc in Resources */,
