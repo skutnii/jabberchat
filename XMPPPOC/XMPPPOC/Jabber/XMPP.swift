@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Jabber {
+class XMPP {
     
     private init() {
         xmpp_initialize()
@@ -18,11 +18,11 @@ class Jabber {
         xmpp_shutdown()
     }
     
-    private static weak var _shared: Jabber? = nil
+    private static weak var _shared: XMPP? = nil
     
-    private static func getInstance() -> Jabber {
+    private static func getInstance() -> XMPP {
         return _shared ?? {
-            let jabber = Jabber()
+            let jabber = XMPP()
             _shared = jabber
             return jabber
         } ()
@@ -34,12 +34,12 @@ class Jabber {
         private var _running = false
         
         //Keep a reference to Jabber to automate shutdown
-        private var _jabber: Jabber
+        private var _jabber: XMPP
         
         init(logLevel: xmpp_log_level_t = XMPP_LEVEL_ERROR) {
             let logger = xmpp_get_default_logger(logLevel)
             _context = xmpp_ctx_new(nil, logger)
-            _jabber = Jabber.getInstance()
+            _jabber = XMPP.getInstance()
         }
         
         deinit {

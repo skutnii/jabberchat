@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Jabber {
+extension XMPP {
     
     class Stanza {
         private var _stanza: OpaquePointer
