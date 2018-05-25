@@ -1,0 +1,6 @@
+framework module Pods_libstrophe {
+  umbrella header "Pods-libstrophe-umbrella.h"
+
+  export *
+  module * { export * }
+}

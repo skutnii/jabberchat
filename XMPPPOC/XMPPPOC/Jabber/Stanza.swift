@@ -35,6 +35,16 @@ extension XMPP {
             xmpp_message_set_body(_stanza, body.cString(using: .utf8))
         }
         
+        convenience init?(presenceTo jid: String, context: Context) {
+            guard let presence = xmpp_presence_new(context.opaque) else {
+                return nil
+            }
+            
+            xmpp_stanza_set_to(presence, jid.cString(using: .utf8))
+            self.init(presence, context)
+            xmpp_stanza_release(presence)
+        }
+        
         deinit {
             xmpp_stanza_release(_stanza)
         }

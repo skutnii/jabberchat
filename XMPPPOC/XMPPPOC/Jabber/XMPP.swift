@@ -33,7 +33,7 @@ class XMPP {
         fileprivate var _context: OpaquePointer
         private var _running = false
         
-        //Keep a reference to Jabber to automate shutdown
+        //Keep a reference to XMPP to automate shutdown
         private var _jabber: XMPP
         
         init(logLevel: xmpp_log_level_t = XMPP_LEVEL_ERROR) {

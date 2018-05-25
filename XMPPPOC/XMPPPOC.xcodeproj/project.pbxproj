@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141CE16020B85EF3005A80CA /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141CE15F20B85EF3005A80CA /* Conversation.swift */; };
 		145DD2D020B55AA90069FBD3 /* Stanza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD2CF20B55AA90069FBD3 /* Stanza.swift */; };
+		146489AE20B847F600A1F69D /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146489AD20B847F600A1F69D /* Chat.swift */; };
+		146489BC20B84B4C00A1F69D /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146489B520B84B4C00A1F69D /* Mutex.swift */; };
+		146489BF20B84B4C00A1F69D /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146489B820B84B4C00A1F69D /* Promise.swift */; };
+		146489C220B851CB00A1F69D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146489C120B851CB00A1F69D /* Session.swift */; };
 		14A61E6B20B43A7600EE03EE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61D2520B43A7500EE03EE /* libcrypto.a */; };
 		14A61E6F20B43A7600EE03EE /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61D2B20B43A7500EE03EE /* libssl.a */; };
 		14A61E7C20B43A7600EE03EE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61D8E20B43A7500EE03EE /* libcrypto.a */; };
@@ -64,8 +69,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		141CE15F20B85EF3005A80CA /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		145DD2CF20B55AA90069FBD3 /* Stanza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stanza.swift; sourceTree = "<group>"; };
 		146489AB20B8002800A1F69D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		146489AD20B847F600A1F69D /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		146489AF20B84A5C00A1F69D /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		146489B120B84B4C00A1F69D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		146489B220B84B4C00A1F69D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		146489B520B84B4C00A1F69D /* Mutex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
+		146489B820B84B4C00A1F69D /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		146489C120B851CB00A1F69D /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		14A61C2320B4337100EE03EE /* build-loop-targets.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-loop-targets.sh"; sourceTree = "<group>"; };
 		14A61C2420B4337100EE03EE /* build-loop-archs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-loop-archs.sh"; sourceTree = "<group>"; };
 		14A61C2520B4337100EE03EE /* build-libssl.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-libssl.sh"; sourceTree = "<group>"; };
@@ -655,6 +668,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		146489B020B84B4C00A1F69D /* EasyAsync */ = {
+			isa = PBXGroup;
+			children = (
+				146489B120B84B4C00A1F69D /* LICENSE */,
+				146489B220B84B4C00A1F69D /* README.md */,
+				146489B320B84B4C00A1F69D /* lib */,
+			);
+			path = EasyAsync;
+			sourceTree = "<group>";
+		};
+		146489B320B84B4C00A1F69D /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				146489B520B84B4C00A1F69D /* Mutex.swift */,
+				146489B820B84B4C00A1F69D /* Promise.swift */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		146489C020B84B5300A1F69D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				146489B020B84B4C00A1F69D /* EasyAsync */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		14A61C2220B4337100EE03EE /* scripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1477,6 +1517,8 @@
 		14A63F7920B41F1E00EE03EE = {
 			isa = PBXGroup;
 			children = (
+				146489C020B84B5300A1F69D /* Pods */,
+				146489AF20B84A5C00A1F69D /* Podfile */,
 				146489AB20B8002800A1F69D /* README.md */,
 				14A61CC620B43A7500EE03EE /* bin */,
 				14A61C2920B4388200EE03EE /* include */,
@@ -1510,6 +1552,9 @@
 				14A63F8E20B41F1E00EE03EE /* LaunchScreen.storyboard */,
 				14A63F9120B41F1E00EE03EE /* Info.plist */,
 				14A61EFC20B442F300EE03EE /* bridge.h */,
+				146489AD20B847F600A1F69D /* Chat.swift */,
+				146489C120B851CB00A1F69D /* Session.swift */,
+				141CE15F20B85EF3005A80CA /* Conversation.swift */,
 			);
 			path = XMPPPOC;
 			sourceTree = "<group>";
@@ -1778,6 +1823,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				145DD2D020B55AA90069FBD3 /* Stanza.swift in Sources */,
+				146489BF20B84B4C00A1F69D /* Promise.swift in Sources */,
 				14A6895120B4205300EE03EE /* stanza.c in Sources */,
 				14A61EF720B440A500EE03EE /* Account.swift in Sources */,
 				14A6895220B4205300EE03EE /* rand.c in Sources */,
@@ -1790,6 +1836,7 @@
 				14A6895820B4205300EE03EE /* sha1.c in Sources */,
 				14A6895920B4205300EE03EE /* oostanza.cpp in Sources */,
 				14A6895A20B4205300EE03EE /* ctx.c in Sources */,
+				146489AE20B847F600A1F69D /* Chat.swift in Sources */,
 				14A6895B20B4205300EE03EE /* hash.c in Sources */,
 				14A6895C20B4205300EE03EE /* oocontext.cpp in Sources */,
 				14A6895D20B4205300EE03EE /* scram.c in Sources */,
@@ -1800,9 +1847,12 @@
 				14A6896320B4205300EE03EE /* uuid.c in Sources */,
 				14A6896420B4205300EE03EE /* sasl.c in Sources */,
 				14A6896520B4205300EE03EE /* md5.c in Sources */,
+				146489BC20B84B4C00A1F69D /* Mutex.swift in Sources */,
 				14A6896620B4205300EE03EE /* crypto.c in Sources */,
 				14A61EA120B43AFE00EE03EE /* snprintf.c in Sources */,
+				141CE16020B85EF3005A80CA /* Conversation.swift in Sources */,
 				14A6896720B4205300EE03EE /* tls_openssl.c in Sources */,
+				146489C220B851CB00A1F69D /* Session.swift in Sources */,
 				14A63F8820B41F1E00EE03EE /* XMPPViewController.swift in Sources */,
 				14A63F8620B41F1E00EE03EE /* AppDelegate.swift in Sources */,
 				14A61F0B20B4491A00EE03EE /* Connection.swift in Sources */,

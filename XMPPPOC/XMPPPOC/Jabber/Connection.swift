@@ -6,17 +6,25 @@
 //  Copyright © 2018 Progresstech Inc. All rights reserved.
 //
 
+
 import Foundation
+
+protocol PXMPPConnectionDelegate {
+    func connectionSuccessful(_ connection: XMPP.Connection)
+    func connectionFailed(_ connection: XMPP.Connection)
+}
 
 extension XMPP {
     
     class Connection {
         
+        class Failure: Error {}
+        
         let account: Account
         private let _context: Context
         fileprivate var _connection: OpaquePointer
         
-        private var _connected: Bool = false
+        let ok = Promise<Void>()
         
         init(account: Account, context: Context) {
             self.account = account
@@ -67,8 +75,10 @@ extension XMPP {
             instanceDispatch(object) { connection in
                 let stanza = Stanza(realStanza, connection._context)
                 
-                for handle in connection.handlers {
-                    handle(connection, stanza)
+                connection._lock.synchronized {
+                    for (_, handle) in connection._handlers {
+                        handle(connection, stanza)
+                    }
                 }
             }
         }
@@ -78,7 +88,6 @@ extension XMPP {
             xmpp_send(_connection, presence)
             xmpp_stanza_release(presence)
             
-            _connected = true
             xmpp_handler_add(_connection,
                              { (conn, stanza, object) -> Int32 in
                                 Connection.handler(conn, stanza, object)
@@ -88,9 +97,12 @@ extension XMPP {
                              nil,
                              nil,
                              thisPtr)
+            
+            ok.resolve(())
         }
         
         private func onConnectFailure() {
+            ok.reject(Failure())
         }
                 
         private func onConnectionEvent(_ status: xmpp_conn_event_t, _ error: Int32, _ streamError: UnsafeMutablePointer<xmpp_stream_error_t>?) {
@@ -106,27 +118,33 @@ extension XMPP {
             return UnsafeMutableRawPointer(Unmanaged.passUnretained(self).toOpaque())
         }
         
+        private let _lock = Synchronizer()
+        
         typealias Handler = (Connection, Stanza) -> Void
-        var handlers = [Handler]()
+        private var _handlers = [String: Handler]()
+        
+        func addHandler(_ name: String, _ handler: @escaping Handler) {
+            _lock.synchronized {
+                _handlers[name] = handler
+            }
+        }
+        
+        func remove(handlerNamed name: String) {
+            _lock.synchronized {
+                _handlers[name] = nil
+            }
+        }
         
         func send(_ stanza: Stanza) {
             xmpp_send(_connection, stanza.opaque)
         }
         
-        func sendPresence(to jid: String) {
-            let presence = xmpp_presence_new(_context.opaque)
-            xmpp_stanza_set_to(presence, jid.cString(using: .utf8))
-            xmpp_send(_connection, presence)
-            xmpp_stanza_release(presence)
-        }
-        
         func close() {
-            guard _connected else {
+            guard ok.state == .fulfilled else {
                 return
             }
             
             xmpp_disconnect(_connection)
-            _connected = false
         }
     }
     

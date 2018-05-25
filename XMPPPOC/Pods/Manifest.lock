@@ -1,0 +1,16 @@
+PODS:
+  - EasyAsync (0.2.1)
+
+DEPENDENCIES:
+  - EasyAsync
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - EasyAsync
+
+SPEC CHECKSUMS:
+  EasyAsync: 2389f322b49750e8d973206b61e3153a60f03efb
+
+PODFILE CHECKSUM: 4e87b049c3931ecd43432c3ae0fc2524ecdd7599
+
+COCOAPODS: 1.5.2
