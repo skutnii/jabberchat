@@ -1,0 +1,38 @@
+I, [2018-05-24T10:56:41.397379 #928]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:03:25.199915 #940]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:15:30.553405 #950]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:16:14.805918 #955]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:20:52.300648 #963]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:22:01.169836 #966]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:23:12.500611 #971]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:24:07.627378 #972]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:24:29.067062 #973]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:26:18.158534 #974]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:27:22.005471 #976]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:28:18.536439 #977]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:28:40.384922 #978]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:29:52.716838 #981]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:30:46.355308 #984]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:30:46.375252 #984]  INFO -- : #<Net::HTTPBadRequest 400 Bad Request readbody=true>
+E, [2018-05-24T11:30:46.375347 #984] ERROR -- : Auth failed for test
+I, [2018-05-24T11:31:48.916850 #988]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:31:48.939348 #988]  INFO -- : #<Net::HTTPBadRequest 400 Bad Request readbody=true>
+E, [2018-05-24T11:31:48.939433 #988] ERROR -- : Auth failed for test
+I, [2018-05-24T11:31:48.939462 #988]  INFO -- : Response: <html>
+<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>
+<body bgcolor="white">
+<center><h1>400 Bad Request</h1></center>
+<center>The plain HTTP request was sent to HTTPS port</center>
+<hr><center>nginx/1.10.3 (Ubuntu)</center>
+</body>
+</html>
+
+I, [2018-05-24T11:35:29.885103 #994]  INFO -- : Starting ejabberd authentication service
+E, [2018-05-24T11:35:29.885943 #994] ERROR -- : undefined method `user' for "https://news.staging.ptu.aero/wp-json/jwt-auth/v1/token":String
+I, [2018-05-24T11:36:12.464981 #996]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:36:12.604135 #996]  INFO -- : #<Net::HTTPOK 200 OK readbody=true>
+E, [2018-05-24T11:36:12.604255 #996] ERROR -- : Auth failed for test
+I, [2018-05-24T11:36:12.604299 #996]  INFO -- : Response: {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbmV3cy5zdGFnaW5nLnB0dS5hZXJvIiwiaWF0IjoxNTI3MTUwOTcyLCJuYmYiOjE1MjcxNTA5NzIsImV4cCI6MTUyNzc1NTc3MiwiZGF0YSI6eyJ1c2VyIjp7ImlkIjoiNTk4In19fQ.rP_hSQ-7I-CuMo-AIwuc467Y2_ijhKozUWcOb1BI9nU","user_email":"test.mateusz.dopka@jeppesen.com","user_nicename":"test","user_display_name":"test test"}
+I, [2018-05-24T11:39:51.843223 #1003]  INFO -- : Starting ejabberd authentication service
+I, [2018-05-24T11:39:51.935619 #1003]  INFO -- : #<Net::HTTPOK 200 OK readbody=true>
+I, [2018-05-24T11:39:51.935737 #1003]  INFO -- : Auth successful for test
