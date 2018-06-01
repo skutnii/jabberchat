@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Jabber {
+extension XMPP {
     
     class Connection {
         

@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Jabber {
+extension XMPP {
     
     class Account {
         let jid: String

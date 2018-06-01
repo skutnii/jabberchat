@@ -8,10 +8,10 @@
 
 import UIKit
 
-class JabberViewController: UIViewController {
+class XMPPViewController: UIViewController {
     
-    private var _context = Jabber.Context(logLevel: XMPP_LEVEL_DEBUG)
-    private var _connection: Jabber.Connection?
+    private var _context = XMPP.Context(logLevel: XMPP_LEVEL_DEBUG)
+    private var _connection: XMPP.Connection?
     private var _started = false
     private var _jid: String?
     
@@ -74,8 +74,8 @@ class JabberViewController: UIViewController {
             return
         }
         
-        let acc = Jabber.Account(jid: user, password: pass)
-        let connection = Jabber.Connection(account: acc, context: _context)
+        let acc = XMPP.Account(jid: user, password: pass)
+        let connection = XMPP.Connection(account: acc, context: _context)
         _connection = connection
         connection.handlers.append {
             [unowned self] (connection, stanza) in
@@ -100,7 +100,7 @@ class JabberViewController: UIViewController {
         _context.run(in: RunLoop.main)
     }
     
-    func display(stanza: Jabber.Stanza) {
+    func display(stanza: XMPP.Stanza) {
         guard let content = stanza.body?.text else {
             return
         }
@@ -116,7 +116,7 @@ class JabberViewController: UIViewController {
         }
     }
     
-    func askReply(to stanza: Jabber.Stanza) {
+    func askReply(to stanza: XMPP.Stanza) {
         guard let sender = stanza.from else {
             return
         }
@@ -154,7 +154,7 @@ class JabberViewController: UIViewController {
             return
         }
         
-        let reply = Jabber.Stanza(message: message, to: contact, context: _context)
+        let reply = XMPP.Stanza(message: message, to: contact, context: _context)
         reply.from = _jid
         
         display(stanza: reply)

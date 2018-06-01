@@ -8,83 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		145DD2D020B55AA90069FBD3 /* Stanza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD2CF20B55AA90069FBD3 /* Stanza.swift */; };
-		146489AC20B8002800A1F69D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 146489AB20B8002800A1F69D /* README.md */; };
-		14A61E6020B43A7600EE03EE /* c_hash in Resources */ = {isa = PBXBuildFile; fileRef = 14A61CC920B43A7500EE03EE /* c_hash */; };
-		14A61E6120B43A7600EE03EE /* CA.sh in Resources */ = {isa = PBXBuildFile; fileRef = 14A61CCA20B43A7500EE03EE /* CA.sh */; };
-		14A61E6220B43A7600EE03EE /* tsget in Resources */ = {isa = PBXBuildFile; fileRef = 14A61CCB20B43A7500EE03EE /* tsget */; };
-		14A61E6320B43A7600EE03EE /* c_info in Resources */ = {isa = PBXBuildFile; fileRef = 14A61CCC20B43A7500EE03EE /* c_info */; };
-		14A61E6420B43A7600EE03EE /* c_issuer in Resources */ = {isa = PBXBuildFile; fileRef = 14A61CCD20B43A7500EE03EE /* c_issuer */; };
-		14A61E6520B43A7600EE03EE /* CA.pl in Resources */ = {isa = PBXBuildFile; fileRef = 14A61CCE20B43A7500EE03EE /* CA.pl */; };
-		14A61E6620B43A7600EE03EE /* c_name in Resources */ = {isa = PBXBuildFile; fileRef = 14A61CCF20B43A7500EE03EE /* c_name */; };
-		14A61E6720B43A7600EE03EE /* build-openssl-1.0.2l.log in Resources */ = {isa = PBXBuildFile; fileRef = 14A61CD020B43A7500EE03EE /* build-openssl-1.0.2l.log */; };
-		14A61E6820B43A7600EE03EE /* c_rehash in Resources */ = {isa = PBXBuildFile; fileRef = 14A61CD220B43A7500EE03EE /* c_rehash */; };
-		14A61E6920B43A7600EE03EE /* openssl in Resources */ = {isa = PBXBuildFile; fileRef = 14A61CD320B43A7500EE03EE /* openssl */; };
-		14A61E6A20B43A7600EE03EE /* openssl.cnf in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D2120B43A7500EE03EE /* openssl.cnf */; };
 		14A61E6B20B43A7600EE03EE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61D2520B43A7500EE03EE /* libcrypto.a */; };
-		14A61E6C20B43A7600EE03EE /* openssl.pc in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D2720B43A7500EE03EE /* openssl.pc */; };
-		14A61E6D20B43A7600EE03EE /* libssl.pc in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D2820B43A7500EE03EE /* libssl.pc */; };
-		14A61E6E20B43A7600EE03EE /* libcrypto.pc in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D2920B43A7500EE03EE /* libcrypto.pc */; };
 		14A61E6F20B43A7600EE03EE /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61D2B20B43A7500EE03EE /* libssl.a */; };
-		14A61E7020B43A7600EE03EE /* c_hash in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D3120B43A7500EE03EE /* c_hash */; };
-		14A61E7120B43A7600EE03EE /* CA.sh in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D3220B43A7500EE03EE /* CA.sh */; };
-		14A61E7220B43A7600EE03EE /* tsget in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D3320B43A7500EE03EE /* tsget */; };
-		14A61E7320B43A7600EE03EE /* c_info in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D3420B43A7500EE03EE /* c_info */; };
-		14A61E7420B43A7600EE03EE /* c_issuer in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D3520B43A7500EE03EE /* c_issuer */; };
-		14A61E7520B43A7600EE03EE /* CA.pl in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D3620B43A7500EE03EE /* CA.pl */; };
-		14A61E7620B43A7600EE03EE /* c_name in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D3720B43A7500EE03EE /* c_name */; };
-		14A61E7720B43A7600EE03EE /* build-openssl-1.0.2l.log in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D3820B43A7500EE03EE /* build-openssl-1.0.2l.log */; };
-		14A61E7820B43A7600EE03EE /* c_rehash in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D3A20B43A7500EE03EE /* c_rehash */; };
-		14A61E7920B43A7600EE03EE /* openssl in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D3B20B43A7500EE03EE /* openssl */; };
-		14A61E7A20B43A7600EE03EE /* build-openssl-1.0.2.log in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D8920B43A7500EE03EE /* build-openssl-1.0.2.log */; };
-		14A61E7B20B43A7600EE03EE /* openssl.cnf in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D8A20B43A7500EE03EE /* openssl.cnf */; };
 		14A61E7C20B43A7600EE03EE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61D8E20B43A7500EE03EE /* libcrypto.a */; };
-		14A61E7D20B43A7600EE03EE /* openssl.pc in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D9020B43A7500EE03EE /* openssl.pc */; };
-		14A61E7E20B43A7600EE03EE /* libssl.pc in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D9120B43A7500EE03EE /* libssl.pc */; };
-		14A61E7F20B43A7600EE03EE /* libcrypto.pc in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D9220B43A7500EE03EE /* libcrypto.pc */; };
 		14A61E8020B43A7600EE03EE /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61D9420B43A7500EE03EE /* libssl.a */; };
-		14A61E8120B43A7600EE03EE /* c_hash in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D9820B43A7500EE03EE /* c_hash */; };
-		14A61E8220B43A7600EE03EE /* CA.sh in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D9920B43A7500EE03EE /* CA.sh */; };
-		14A61E8320B43A7600EE03EE /* tsget in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D9A20B43A7500EE03EE /* tsget */; };
-		14A61E8420B43A7600EE03EE /* c_info in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D9B20B43A7500EE03EE /* c_info */; };
-		14A61E8520B43A7600EE03EE /* c_issuer in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D9C20B43A7500EE03EE /* c_issuer */; };
-		14A61E8620B43A7600EE03EE /* CA.pl in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D9D20B43A7500EE03EE /* CA.pl */; };
-		14A61E8720B43A7600EE03EE /* c_name in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D9E20B43A7500EE03EE /* c_name */; };
-		14A61E8820B43A7600EE03EE /* build-openssl-1.0.2l.log in Resources */ = {isa = PBXBuildFile; fileRef = 14A61D9F20B43A7500EE03EE /* build-openssl-1.0.2l.log */; };
-		14A61E8920B43A7600EE03EE /* c_rehash in Resources */ = {isa = PBXBuildFile; fileRef = 14A61DA120B43A7500EE03EE /* c_rehash */; };
-		14A61E8A20B43A7600EE03EE /* openssl in Resources */ = {isa = PBXBuildFile; fileRef = 14A61DA220B43A7500EE03EE /* openssl */; };
-		14A61E8B20B43A7600EE03EE /* openssl.cnf in Resources */ = {isa = PBXBuildFile; fileRef = 14A61DF020B43A7600EE03EE /* openssl.cnf */; };
 		14A61E8C20B43A7600EE03EE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61DF420B43A7600EE03EE /* libcrypto.a */; };
-		14A61E8D20B43A7600EE03EE /* openssl.pc in Resources */ = {isa = PBXBuildFile; fileRef = 14A61DF620B43A7600EE03EE /* openssl.pc */; };
-		14A61E8E20B43A7600EE03EE /* libssl.pc in Resources */ = {isa = PBXBuildFile; fileRef = 14A61DF720B43A7600EE03EE /* libssl.pc */; };
-		14A61E8F20B43A7600EE03EE /* libcrypto.pc in Resources */ = {isa = PBXBuildFile; fileRef = 14A61DF820B43A7600EE03EE /* libcrypto.pc */; };
 		14A61E9020B43A7600EE03EE /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61DFA20B43A7600EE03EE /* libssl.a */; };
-		14A61E9120B43A7600EE03EE /* c_hash in Resources */ = {isa = PBXBuildFile; fileRef = 14A61DFD20B43A7600EE03EE /* c_hash */; };
-		14A61E9220B43A7600EE03EE /* CA.sh in Resources */ = {isa = PBXBuildFile; fileRef = 14A61DFE20B43A7600EE03EE /* CA.sh */; };
-		14A61E9320B43A7600EE03EE /* tsget in Resources */ = {isa = PBXBuildFile; fileRef = 14A61DFF20B43A7600EE03EE /* tsget */; };
-		14A61E9420B43A7600EE03EE /* c_info in Resources */ = {isa = PBXBuildFile; fileRef = 14A61E0020B43A7600EE03EE /* c_info */; };
-		14A61E9520B43A7600EE03EE /* c_issuer in Resources */ = {isa = PBXBuildFile; fileRef = 14A61E0120B43A7600EE03EE /* c_issuer */; };
-		14A61E9620B43A7600EE03EE /* CA.pl in Resources */ = {isa = PBXBuildFile; fileRef = 14A61E0220B43A7600EE03EE /* CA.pl */; };
-		14A61E9720B43A7600EE03EE /* c_name in Resources */ = {isa = PBXBuildFile; fileRef = 14A61E0320B43A7600EE03EE /* c_name */; };
-		14A61E9820B43A7600EE03EE /* build-openssl-1.0.2l.log in Resources */ = {isa = PBXBuildFile; fileRef = 14A61E0420B43A7600EE03EE /* build-openssl-1.0.2l.log */; };
-		14A61E9920B43A7600EE03EE /* c_rehash in Resources */ = {isa = PBXBuildFile; fileRef = 14A61E0620B43A7600EE03EE /* c_rehash */; };
-		14A61E9A20B43A7600EE03EE /* openssl in Resources */ = {isa = PBXBuildFile; fileRef = 14A61E0720B43A7600EE03EE /* openssl */; };
-		14A61E9B20B43A7600EE03EE /* openssl.cnf in Resources */ = {isa = PBXBuildFile; fileRef = 14A61E5520B43A7600EE03EE /* openssl.cnf */; };
 		14A61E9C20B43A7600EE03EE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61E5920B43A7600EE03EE /* libcrypto.a */; };
-		14A61E9D20B43A7600EE03EE /* openssl.pc in Resources */ = {isa = PBXBuildFile; fileRef = 14A61E5B20B43A7600EE03EE /* openssl.pc */; };
-		14A61E9E20B43A7600EE03EE /* libssl.pc in Resources */ = {isa = PBXBuildFile; fileRef = 14A61E5C20B43A7600EE03EE /* libssl.pc */; };
-		14A61E9F20B43A7600EE03EE /* libcrypto.pc in Resources */ = {isa = PBXBuildFile; fileRef = 14A61E5D20B43A7600EE03EE /* libcrypto.pc */; };
 		14A61EA020B43A7600EE03EE /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61E5F20B43A7600EE03EE /* libssl.a */; };
 		14A61EA120B43AFE00EE03EE /* snprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 14A63FE720B41F5000EE03EE /* snprintf.c */; };
 		14A61EA320B43CBA00EE03EE /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61EA220B43CBA00EE03EE /* libresolv.tbd */; };
 		14A61EF720B440A500EE03EE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A61EF620B440A500EE03EE /* Account.swift */; };
-		14A61EFB20B4426200EE03EE /* Jabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A61EFA20B4426200EE03EE /* Jabber.swift */; };
+		14A61EFB20B4426200EE03EE /* XMPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A61EFA20B4426200EE03EE /* XMPP.swift */; };
 		14A61F0420B4460100EE03EE /* libstrophe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A61F0320B4460100EE03EE /* libstrophe.swift */; };
 		14A61F0B20B4491A00EE03EE /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A61F0A20B4491A00EE03EE /* Connection.swift */; };
 		14A63F8620B41F1E00EE03EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A63F8520B41F1E00EE03EE /* AppDelegate.swift */; };
-		14A63F8820B41F1E00EE03EE /* JabberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A63F8720B41F1E00EE03EE /* JabberViewController.swift */; };
+		14A63F8820B41F1E00EE03EE /* XMPPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A63F8720B41F1E00EE03EE /* XMPPViewController.swift */; };
 		14A63F8B20B41F1E00EE03EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14A63F8920B41F1E00EE03EE /* Main.storyboard */; };
 		14A63F8D20B41F1E00EE03EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14A63F8C20B41F1E00EE03EE /* Assets.xcassets */; };
-		14A63F9020B41F1E00EE03EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14A63F8E20B41F1E00EE03EE /* LaunchScreen.storyboard */; };
 		14A6895120B4205300EE03EE /* stanza.c in Sources */ = {isa = PBXBuildFile; fileRef = 14A63FD520B41F5000EE03EE /* stanza.c */; };
 		14A6895220B4205300EE03EE /* rand.c in Sources */ = {isa = PBXBuildFile; fileRef = 14A63FD820B41F5000EE03EE /* rand.c */; };
 		14A6895320B4205300EE03EE /* auth.c in Sources */ = {isa = PBXBuildFile; fileRef = 14A63FD920B41F5000EE03EE /* auth.c */; };
@@ -579,14 +520,14 @@
 		14A61EF220B43E4500EE03EE /* idea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = idea.h; sourceTree = "<group>"; };
 		14A61EF320B43E4500EE03EE /* lhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lhash.h; sourceTree = "<group>"; };
 		14A61EF620B440A500EE03EE /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		14A61EFA20B4426200EE03EE /* Jabber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jabber.swift; sourceTree = "<group>"; };
+		14A61EFA20B4426200EE03EE /* XMPP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPP.swift; sourceTree = "<group>"; };
 		14A61EFC20B442F300EE03EE /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 		14A61F0120B4460000EE03EE /* liblibstrophe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibstrophe.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A61F0320B4460100EE03EE /* libstrophe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libstrophe.swift; sourceTree = "<group>"; };
 		14A61F0A20B4491A00EE03EE /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		14A63F8220B41F1E00EE03EE /* XMPPPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMPPPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A63F8520B41F1E00EE03EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14A63F8720B41F1E00EE03EE /* JabberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JabberViewController.swift; sourceTree = "<group>"; };
+		14A63F8720B41F1E00EE03EE /* XMPPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPViewController.swift; sourceTree = "<group>"; };
 		14A63F8A20B41F1E00EE03EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14A63F8C20B41F1E00EE03EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14A63F8F20B41F1E00EE03EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -1518,7 +1459,7 @@
 			isa = PBXGroup;
 			children = (
 				14A61EF620B440A500EE03EE /* Account.swift */,
-				14A61EFA20B4426200EE03EE /* Jabber.swift */,
+				14A61EFA20B4426200EE03EE /* XMPP.swift */,
 				14A61F0A20B4491A00EE03EE /* Connection.swift */,
 				145DD2CF20B55AA90069FBD3 /* Stanza.swift */,
 			);
@@ -1563,7 +1504,7 @@
 			children = (
 				14A61EF520B4408B00EE03EE /* Jabber */,
 				14A63F8520B41F1E00EE03EE /* AppDelegate.swift */,
-				14A63F8720B41F1E00EE03EE /* JabberViewController.swift */,
+				14A63F8720B41F1E00EE03EE /* XMPPViewController.swift */,
 				14A63F8920B41F1E00EE03EE /* Main.storyboard */,
 				14A63F8C20B41F1E00EE03EE /* Assets.xcassets */,
 				14A63F8E20B41F1E00EE03EE /* LaunchScreen.storyboard */,
@@ -1816,66 +1757,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14A61E6A20B43A7600EE03EE /* openssl.cnf in Resources */,
-				14A61E7620B43A7600EE03EE /* c_name in Resources */,
-				14A61E6220B43A7600EE03EE /* tsget in Resources */,
-				14A61E6820B43A7600EE03EE /* c_rehash in Resources */,
-				14A61E8120B43A7600EE03EE /* c_hash in Resources */,
-				14A61E9F20B43A7600EE03EE /* libcrypto.pc in Resources */,
-				14A61E8620B43A7600EE03EE /* CA.pl in Resources */,
-				14A61E9920B43A7600EE03EE /* c_rehash in Resources */,
-				14A61E6D20B43A7600EE03EE /* libssl.pc in Resources */,
-				14A61E8520B43A7600EE03EE /* c_issuer in Resources */,
-				14A61E7F20B43A7600EE03EE /* libcrypto.pc in Resources */,
-				14A61E6720B43A7600EE03EE /* build-openssl-1.0.2l.log in Resources */,
-				14A61E8B20B43A7600EE03EE /* openssl.cnf in Resources */,
-				14A61E9620B43A7600EE03EE /* CA.pl in Resources */,
-				14A61E8F20B43A7600EE03EE /* libcrypto.pc in Resources */,
-				14A61E6120B43A7600EE03EE /* CA.sh in Resources */,
-				14A61E6020B43A7600EE03EE /* c_hash in Resources */,
-				14A61E6520B43A7600EE03EE /* CA.pl in Resources */,
-				14A61E8720B43A7600EE03EE /* c_name in Resources */,
-				14A61E7220B43A7600EE03EE /* tsget in Resources */,
-				14A61E7E20B43A7600EE03EE /* libssl.pc in Resources */,
-				14A61E9220B43A7600EE03EE /* CA.sh in Resources */,
-				146489AC20B8002800A1F69D /* README.md in Resources */,
-				14A61E7120B43A7600EE03EE /* CA.sh in Resources */,
-				14A61E9820B43A7600EE03EE /* build-openssl-1.0.2l.log in Resources */,
-				14A61E9D20B43A7600EE03EE /* openssl.pc in Resources */,
-				14A61E9420B43A7600EE03EE /* c_info in Resources */,
-				14A63F9020B41F1E00EE03EE /* LaunchScreen.storyboard in Resources */,
-				14A61E7320B43A7600EE03EE /* c_info in Resources */,
-				14A61E6920B43A7600EE03EE /* openssl in Resources */,
-				14A61E9A20B43A7600EE03EE /* openssl in Resources */,
-				14A61E7520B43A7600EE03EE /* CA.pl in Resources */,
-				14A61E8220B43A7600EE03EE /* CA.sh in Resources */,
-				14A61E9B20B43A7600EE03EE /* openssl.cnf in Resources */,
-				14A61E7920B43A7600EE03EE /* openssl in Resources */,
-				14A61E8420B43A7600EE03EE /* c_info in Resources */,
-				14A61E7420B43A7600EE03EE /* c_issuer in Resources */,
-				14A61E7020B43A7600EE03EE /* c_hash in Resources */,
-				14A61E9E20B43A7600EE03EE /* libssl.pc in Resources */,
-				14A61E7820B43A7600EE03EE /* c_rehash in Resources */,
-				14A61E8A20B43A7600EE03EE /* openssl in Resources */,
-				14A61E6620B43A7600EE03EE /* c_name in Resources */,
-				14A61E7A20B43A7600EE03EE /* build-openssl-1.0.2.log in Resources */,
-				14A61E7720B43A7600EE03EE /* build-openssl-1.0.2l.log in Resources */,
-				14A61E9720B43A7600EE03EE /* c_name in Resources */,
-				14A61E8920B43A7600EE03EE /* c_rehash in Resources */,
-				14A61E9120B43A7600EE03EE /* c_hash in Resources */,
-				14A61E6C20B43A7600EE03EE /* openssl.pc in Resources */,
-				14A61E6320B43A7600EE03EE /* c_info in Resources */,
-				14A61E8D20B43A7600EE03EE /* openssl.pc in Resources */,
-				14A61E6E20B43A7600EE03EE /* libcrypto.pc in Resources */,
-				14A61E8820B43A7600EE03EE /* build-openssl-1.0.2l.log in Resources */,
-				14A61E8E20B43A7600EE03EE /* libssl.pc in Resources */,
-				14A61E7D20B43A7600EE03EE /* openssl.pc in Resources */,
-				14A61E6420B43A7600EE03EE /* c_issuer in Resources */,
-				14A61E7B20B43A7600EE03EE /* openssl.cnf in Resources */,
 				14A63F8D20B41F1E00EE03EE /* Assets.xcassets in Resources */,
-				14A61E8320B43A7600EE03EE /* tsget in Resources */,
-				14A61E9320B43A7600EE03EE /* tsget in Resources */,
-				14A61E9520B43A7600EE03EE /* c_issuer in Resources */,
 				14A63F8B20B41F1E00EE03EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1901,7 +1783,7 @@
 				14A6895220B4205300EE03EE /* rand.c in Sources */,
 				14A6895320B4205300EE03EE /* auth.c in Sources */,
 				14A6895420B4205300EE03EE /* util.c in Sources */,
-				14A61EFB20B4426200EE03EE /* Jabber.swift in Sources */,
+				14A61EFB20B4426200EE03EE /* XMPP.swift in Sources */,
 				14A6895520B4205300EE03EE /* resolver.c in Sources */,
 				14A6895620B4205300EE03EE /* handler.c in Sources */,
 				14A6895720B4205300EE03EE /* conn.c in Sources */,
@@ -1921,7 +1803,7 @@
 				14A6896620B4205300EE03EE /* crypto.c in Sources */,
 				14A61EA120B43AFE00EE03EE /* snprintf.c in Sources */,
 				14A6896720B4205300EE03EE /* tls_openssl.c in Sources */,
-				14A63F8820B41F1E00EE03EE /* JabberViewController.swift in Sources */,
+				14A63F8820B41F1E00EE03EE /* XMPPViewController.swift in Sources */,
 				14A63F8620B41F1E00EE03EE /* AppDelegate.swift in Sources */,
 				14A61F0B20B4491A00EE03EE /* Connection.swift in Sources */,
 			);
