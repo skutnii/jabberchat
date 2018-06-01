@@ -61,46 +61,9 @@ class WordpressConnector: PXMPPConnector {
         print("JWTAUTH not supported by server")
     }
     
-    private func sendResourceQuery() {
-        let iq = xmpp_stanza_new(_context)
-        xmpp_stanza_set_name(iq, "iq")
-        xmpp_stanza_set_id(iq, "a1")
-        xmpp_stanza_set_type(iq, "get")
-        
-        let query = xmpp_stanza_new(_context)
-        xmpp_stanza_set_name(query, "query")
-        xmpp_stanza_set_ns(query, "jabber:iq:auth")
-        xmpp_stanza_add_child(iq, query)
-        xmpp_stanza_release(query)
-        
-        let username = xmpp_stanza_new(_context)
-        xmpp_stanza_set_name(username, "username")
-        xmpp_stanza_add_child(query, username)
-        xmpp_stanza_release(username)
-        
-        let usernameContent = xmpp_stanza_new(_context)
-        xmpp_stanza_set_text(usernameContent, "test")
-        xmpp_stanza_add_child(username, usernameContent)
-        xmpp_stanza_release(usernameContent)
-        #if false
-        let resource = xmpp_stanza_new(_context)
-        xmpp_stanza_set_name(resource, "resource")
-        xmpp_stanza_add_child(query, resource)
-        xmpp_stanza_release(resource)
-        
-        let resourceContent = xmpp_stanza_new(_context)
-        xmpp_stanza_set_text(resourceContent, "newsapp")
-        xmpp_stanza_add_child(resource, resourceContent)
-        xmpp_stanza_release(resourceContent)
-        #endif
-        xmpp_send(_connection, iq)
-        
-        xmpp_stanza_release(iq)
-    }
-    
     func sendPresence() {
         let presence = xmpp_presence_new(_context)
-        xmpp_stanza_set_to(presence, "test@localhost")
+        //xmpp_stanza_set_to(presence, "test@localhost")
         xmpp_send(_connection, presence)
         xmpp_stanza_release(presence)
     }
@@ -110,7 +73,7 @@ class WordpressConnector: PXMPPConnector {
         switch name {
         case "success":
             print("JWTAUTH SUCCESS")
-            sendResourceQuery()
+            reopenStream()
         case "failure":
             print("JWTAUTH FAILURE")
         default:
@@ -150,6 +113,52 @@ class WordpressConnector: PXMPPConnector {
             return 0
         }, nil, "iq", "result", CUtils.ptr(to: self))
 
-        xmpp_conn_open_stream_default(connection.opaque)
+        xmpp_conn_open_stream_default(_connection)
+    }
+    
+    func reopenStream() {
+        xmpp_handler_add(_connection, { (_, stanza, objectPtr) -> Int32 in
+            CUtils.with(objectAt: objectPtr, { (instance: WordpressConnector) in
+                instance.on(reopenStream: stanza)
+            })
+            
+            return 0
+        }, nil, "features", nil, CUtils.ptr(to: self))
+
+        xmpp_conn_open_stream_default(_connection)
+    }
+    
+    func on(reopenStream features: OpaquePointer?) {
+        guard nil != xmpp_stanza_get_child_by_name(features, "bind") else {
+            print("Bind not available")
+            return
+        }
+        
+        xmpp_handler_add(_connection, { (_, stanza, objectPtr) -> Int32 in
+            CUtils.with(objectAt: objectPtr, { (instance: WordpressConnector) in
+                instance.on(bind: stanza)
+            })
+            
+            return 0
+        }, nil, "iq", "result", CUtils.ptr(to: self))
+        
+        connection_send_string(_connection, "<iq id=\"_xmpp_bind1\" type=\"set\"><bind xmlns=\"urn:ietf:params:xml:ns:xmpp-bind\"/></iq>")
+    }
+    
+    func on(bind response: OpaquePointer?) {
+        xmpp_handler_add(_connection, { (_, stanza, objectPtr) -> Int32 in
+            CUtils.with(objectAt: objectPtr, { (instance: WordpressConnector) in
+                instance.on(sessionStart: stanza)
+            })
+            
+            return 0
+        }, nil, "iq", "result", CUtils.ptr(to: self))
+        
+        connection_send_string(_connection, "<iq id=\"_xmpp_session1\" type=\"set\"><session xmlns=\"urn:ietf:params:xml:ns:xmpp-session\"/></iq>")
+    }
+    
+    func on(sessionStart: OpaquePointer?) {
+        print("SESSION SUCCESS")
+        sendPresence()
     }
 }

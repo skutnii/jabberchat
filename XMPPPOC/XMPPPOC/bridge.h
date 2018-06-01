@@ -10,5 +10,6 @@
 #define bridge_h
 
 #import "../lib/libstrophe/strophe.h"
+#import "convenience_send.h"
 
 #endif /* bridge_h */
