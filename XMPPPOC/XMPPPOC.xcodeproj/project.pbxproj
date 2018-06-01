@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		145DD2D020B55AA90069FBD3 /* Stanza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD2CF20B55AA90069FBD3 /* Stanza.swift */; };
+		1465280D20C143A700696D59 /* WordpressConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465280C20C143A700696D59 /* WordpressConnector.swift */; };
+		1465280F20C1510200696D59 /* CUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465280E20C1510200696D59 /* CUtils.swift */; };
 		14A61E6B20B43A7600EE03EE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61D2520B43A7500EE03EE /* libcrypto.a */; };
 		14A61E6F20B43A7600EE03EE /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61D2B20B43A7500EE03EE /* libssl.a */; };
 		14A61E7C20B43A7600EE03EE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A61D8E20B43A7500EE03EE /* libcrypto.a */; };
@@ -66,6 +68,8 @@
 /* Begin PBXFileReference section */
 		145DD2CF20B55AA90069FBD3 /* Stanza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stanza.swift; sourceTree = "<group>"; };
 		146489AB20B8002800A1F69D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1465280C20C143A700696D59 /* WordpressConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordpressConnector.swift; sourceTree = "<group>"; };
+		1465280E20C1510200696D59 /* CUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUtils.swift; sourceTree = "<group>"; };
 		14A61C2320B4337100EE03EE /* build-loop-targets.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-loop-targets.sh"; sourceTree = "<group>"; };
 		14A61C2420B4337100EE03EE /* build-loop-archs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-loop-archs.sh"; sourceTree = "<group>"; };
 		14A61C2520B4337100EE03EE /* build-libssl.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-libssl.sh"; sourceTree = "<group>"; };
@@ -1510,6 +1514,8 @@
 				14A63F8E20B41F1E00EE03EE /* LaunchScreen.storyboard */,
 				14A63F9120B41F1E00EE03EE /* Info.plist */,
 				14A61EFC20B442F300EE03EE /* bridge.h */,
+				1465280C20C143A700696D59 /* WordpressConnector.swift */,
+				1465280E20C1510200696D59 /* CUtils.swift */,
 			);
 			path = XMPPPOC;
 			sourceTree = "<group>";
@@ -1790,6 +1796,7 @@
 				14A6895820B4205300EE03EE /* sha1.c in Sources */,
 				14A6895920B4205300EE03EE /* oostanza.cpp in Sources */,
 				14A6895A20B4205300EE03EE /* ctx.c in Sources */,
+				1465280F20C1510200696D59 /* CUtils.swift in Sources */,
 				14A6895B20B4205300EE03EE /* hash.c in Sources */,
 				14A6895C20B4205300EE03EE /* oocontext.cpp in Sources */,
 				14A6895D20B4205300EE03EE /* scram.c in Sources */,
@@ -1800,6 +1807,7 @@
 				14A6896320B4205300EE03EE /* uuid.c in Sources */,
 				14A6896420B4205300EE03EE /* sasl.c in Sources */,
 				14A6896520B4205300EE03EE /* md5.c in Sources */,
+				1465280D20C143A700696D59 /* WordpressConnector.swift in Sources */,
 				14A6896620B4205300EE03EE /* crypto.c in Sources */,
 				14A61EA120B43AFE00EE03EE /* snprintf.c in Sources */,
 				14A6896720B4205300EE03EE /* tls_openssl.c in Sources */,

@@ -75,7 +75,8 @@ class XMPPViewController: UIViewController {
         }
         
         let acc = XMPP.Account(jid: user, password: pass)
-        let connection = XMPP.Connection(account: acc, context: _context)
+        let connector = WordpressConnector()
+        let connection = XMPP.Connection(account: acc, context: _context, connector: connector)
         _connection = connection
         connection.handlers.append {
             [unowned self] (connection, stanza) in

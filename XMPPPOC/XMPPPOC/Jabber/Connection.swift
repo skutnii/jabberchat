@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol PXMPPConnector {
+    func start(connection: XMPP.Connection, context: XMPP.Context)
+}
+
 extension XMPP {
     
     class Connection {
@@ -16,23 +20,41 @@ extension XMPP {
         private let _context: Context
         fileprivate var _connection: OpaquePointer
         
+        var opaque: OpaquePointer {
+            return _connection
+        }
+        
         private var _connected: Bool = false
         
-        init(account: Account, context: Context) {
+        private var _handler: PXMPPConnector?
+        
+        init(account: Account, context: Context, connector: PXMPPConnector?) {
             self.account = account
             _context = context
+            _handler = connector
             
             _connection = xmpp_conn_new(_context.opaque)
             xmpp_conn_set_jid(_connection, account.jid.cString(using: .utf8))
             xmpp_conn_set_pass(_connection, account.password.cString(using: .utf8))
             
-            xmpp_connect_raw(_connection,
-                                nil,
-                                0,
-                                { (conn, status, error, streamError, object) in
+            if nil == connector {
+                xmpp_connect_client(_connection,
+                                 nil,
+                                 0,
+                                 { (conn, status, error, streamError, object) in
                                     Connection.onConnect(conn, status, error, streamError, object)
-                                },
-                                thisPtr)
+                                 },
+                                 thisPtr)
+
+            } else {
+                xmpp_connect_raw(_connection,
+                                 nil,
+                                 0,
+                                 { (conn, status, error, streamError, object) in
+                                    Connection.onConnect(conn, status, error, streamError, object)
+                                 },
+                                 thisPtr)
+            }
         }
         
         deinit {
@@ -94,9 +116,17 @@ extension XMPP {
         }
                 
         private func onConnectionEvent(_ status: xmpp_conn_event_t, _ error: Int32, _ streamError: UnsafeMutablePointer<xmpp_stream_error_t>?) {
-            if status == XMPP_CONN_CONNECT {
+            switch status {
+            case XMPP_CONN_CONNECT:
                 onConnectSuccess()
-            } else {
+            case XMPP_CONN_RAW_CONNECT:
+                guard let handler = _handler else {
+                    onConnectFailure()
+                    return
+                }
+                
+                handler.start(connection: self, context: _context)
+            default:
                 onConnectFailure()
             }
         }
