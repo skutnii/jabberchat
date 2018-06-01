@@ -26,7 +26,7 @@ extension Jabber {
             xmpp_conn_set_jid(_connection, account.jid.cString(using: .utf8))
             xmpp_conn_set_pass(_connection, account.password.cString(using: .utf8))
             
-            xmpp_connect_client(_connection,
+            xmpp_connect_raw(_connection,
                                 nil,
                                 0,
                                 { (conn, status, error, streamError, object) in
